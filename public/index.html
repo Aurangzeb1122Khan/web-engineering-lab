@@ -1,17 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>My Web Engineering Lab</title>
 </head>
+
 <body>
-  <h1>Hi, I'm Aurangzeb</h1>
-  <p>I'm a student learning Web Engineering. This is my first lab setting up my development environment.</p>
-  <h2>Things I expect to learn:</h2>
-  <ul>
-    <li>Building responsive websites with HTML and CSS</li>
-    <li>Writing interactive pages with JavaScript</li>
-    <li>Using Git and GitHub for version control</li>
-  </ul>
+
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">
+    Skip to main content
+  </a>
+
+
+  <!-- Header -->
+  <header>
+
+    <h1 id="greeting">Hi, I'm Aurangzeb</h1>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#schedule" aria-current="location">
+            Office Hours
+          </a>
+        </li>
+
+        <li>
+          <a href="#feedback">
+            Send Feedback
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+
+    <!-- Office Hours Section -->
+    <section id="schedule">
+
+      <h2>Office Hours</h2>
+
+      <figure>
+
+        <svg
+          role="img"
+          aria-labelledby="pin-title"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24">
+
+          <title id="pin-title">Location pin</title>
+
+          <circle
+            cx="12"
+            cy="12"
+            r="8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+          </circle>
+
+          <circle
+            cx="12"
+            cy="12"
+            r="3"
+            fill="currentColor">
+          </circle>
+
+        </svg>
+
+        <figcaption>
+          All office hours are held in Room 214.
+        </figcaption>
+
+      </figure>
+
+
+      <table>
+
+        <caption>Weekly office hours</caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Time</th>
+            <th scope="col">Instructor</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Monday</td>
+
+            <td>
+              <time datetime="10:00">10:00</time>
+              -
+              <time datetime="11:00">11:00</time>
+            </td>
+
+            <td>Lab Engineer</td>
+          </tr>
+
+          <tr>
+            <td>Wednesday</td>
+
+            <td>
+              <time datetime="12:00">12:00</time>
+              -
+              <time datetime="13:00">13:00</time>
+            </td>
+
+            <td>Lab Engineer</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+
+    <!-- Decorative Divider -->
+    <svg
+      aria-hidden="true"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24">
+
+      <circle
+        cx="12"
+        cy="12"
+        r="3"
+        fill="#0b3d91">
+      </circle>
+
+    </svg>
+
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+
+      <h2>Send Feedback</h2>
+
+      <form>
+
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required>
+
+
+        <br><br>
+
+
+        <label for="email">Email</label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          aria-describedby="email-hint">
+
+        <span id="email-hint">
+          We will only use this to reply to you.
+        </span>
+
+
+        <br><br>
+
+
+        <fieldset>
+
+          <legend>Topic</legend>
+
+          <label>
+            <input
+              type="radio"
+              name="topic"
+              value="lab"
+              checked>
+
+            Lab content
+          </label>
+
+          <br>
+
+          <label>
+            <input
+              type="radio"
+              name="topic"
+              value="other">
+
+            Something else
+          </label>
+
+        </fieldset>
+
+
+        <br>
+
+
+        <label for="message">Message</label>
+
+        <br>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          cols="40"
+          required></textarea>
+
+
+        <br><br>
+
+
+        <button type="submit">
+          Submit Feedback
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+
+    <address>
+      Contact your instructor for help.
+    </address>
+
+  </footer>
+
 </body>
+
 </html>
