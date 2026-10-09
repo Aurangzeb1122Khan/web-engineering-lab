@@ -1,0 +1,21 @@
+body{
+    font-family: Arial,sans-serif;
+    line-height: 2;
+}
+.nature{
+    width: 200px;
+    height: 150px;
+    background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    right: 10px;
+    top: 200px;
+    z-index: 10;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

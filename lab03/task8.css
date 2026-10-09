@@ -1,0 +1,39 @@
+.responsive-box {
+    height: 150px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+}
+
+
+@media (max-width: 299px) {
+    .responsive-box {
+        background-color: green;
+    }
+}
+
+
+@media (min-width: 300px) and (max-width: 400px) {
+    .responsive-box {
+        background-color: pink;
+        color: black;
+    }
+}
+
+
+@media (min-width: 401px) and (max-width: 600px) {
+    .responsive-box {
+        background-color: red;
+    }
+}
+
+
+@media (min-width: 601px) {
+    .responsive-box {
+        background-color: blue;
+    }
+}

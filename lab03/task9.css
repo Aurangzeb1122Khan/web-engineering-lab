@@ -1,0 +1,16 @@
+
+.transition-button {
+    background-color: blue;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+}
+
+.transition-button:hover {
+    font-size: 22px;
+    transform: rotate(5deg);
+}
