@@ -1,0 +1,52 @@
+
+
+@layer reset, base, components, utilities;
+
+
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+    }
+}
+
+
+@layer base {
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+    }
+
+    a {
+        color: red;
+    }
+}
+
+
+@layer components {
+    .nav-link {
+        color: blue;
+    }
+
+    :where(nav a).nav-link {
+        color: green;
+    }
+
+    main {
+        max-inline-size: 65ch;
+        margin-inline: auto;
+        padding-inline: 1rem;
+    }
+}
+
+
+@layer utilities {
+    .text-muted {
+        color: #666;
+    }
+}

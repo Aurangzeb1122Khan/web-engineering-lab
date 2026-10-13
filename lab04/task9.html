@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Appointment</title>
+    <link rel="stylesheet" href="task9.css">
+    
+
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>My Website</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="schedule">
+
+            <div>
+                <h2>Schedule an Appointment</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Book</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>10:00 AM</td>
+                            <td>
+                                <button type="button" data-day="Monday">
+                                    Book
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>12:00 PM</td>
+                            <td>
+                                <button type="button" data-day="Wednesday">
+                                    Book
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>2:00 PM</td>
+                            <td>
+                                <button type="button" data-day="Friday">
+                                    Book
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p id="booking-status" role="status" aria-live="polite">
+                    Select a day to book an appointment.
+                </p>
+
+                <form>
+                    <h3 class="span-all">Appointment Form</h3>
+
+                    <label>
+                        Name
+                        <input type="text" name="name" required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" name="email" required>
+                    </label>
+
+                    <label>
+                        Date
+                        <input type="date" name="date">
+                    </label>
+
+                    <label>
+                        Time
+                        <input type="time" name="time">
+                    </label>
+
+                    <fieldset class="span-all">
+                        <legend>Select a Service</legend>
+                        <label>
+                            <input type="radio" name="service" value="web">
+                            Web Design
+                        </label>
+                        <label>
+                            <input type="radio" name="service" value="support">
+                            Technical Support
+                        </label>
+                    </fieldset>
+
+                    <label class="span-all">
+                        Message
+                        <textarea name="message" rows="4"></textarea>
+                    </label>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <aside>
+                <h3>Contact Information</h3>
+                <p>Email: example@email.com</p>
+                <p>Phone: 0300-1234567</p>
+            </aside>
+
+        </section>
+    </main>
+
+</body>
+</html>

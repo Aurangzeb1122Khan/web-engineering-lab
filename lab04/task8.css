@@ -1,0 +1,144 @@
+@layer reset, base, components, utilities;
+
+
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+    }
+}
+
+
+@layer base {
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #222;
+        background-color: #f5f5f5;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        font: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+        margin-block-end: 1rem;
+    }
+
+    a {
+        color: blue;
+    }
+}
+
+
+@layer components {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #e5e7eb;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+    }
+
+    main {
+        max-inline-size: 65ch;
+        margin-inline: auto;
+        padding: 1rem;
+    }
+
+    #schedule {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 8px;
+    }
+
+    label {
+        display: grid;
+        gap: 0.25rem;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    fieldset label {
+        display: block;
+        margin-block: 0.5rem;
+    }
+
+    fieldset input {
+        width: auto;
+    }
+
+    button {
+        padding: 0.75rem 1rem;
+        color: white;
+        background-color: #2563eb;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    aside {
+        padding: 1rem;
+        background-color: #e0f2fe;
+        border-radius: 8px;
+    }
+}
+
+
+@layer utilities {
+    .span-all {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 40rem) {
+    #schedule {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+}

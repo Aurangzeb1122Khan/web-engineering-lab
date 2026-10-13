@@ -1,0 +1,23 @@
+
+@layer components {
+   
+    #schedule {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--space-3);
+    }
+
+   
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-3);
+    }
+}
+
+@layer utilities {
+    
+    .span-all {
+        grid-column: 1 / -1;
+    }
+}

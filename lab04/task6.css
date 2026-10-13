@@ -1,0 +1,23 @@
+
+@layer components {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-3);
+    }
+
+    nav ul {
+        display: flex;
+        gap: var(--space-3);
+        list-style: none;
+        padding: 0;
+    }
+
+    main {
+        max-inline-size: 65ch;
+        margin-inline: auto;
+        padding-inline: var(--space-3);
+        padding-block: var(--space-4);
+    }
+}

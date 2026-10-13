@@ -1,0 +1,24 @@
+a{
+    color: red;
+}
+.nav-link{
+    color: blue;
+
+}
+nav a.nav-link{
+    color: green;
+}
+
+
+/* a {
+    color: red;
+}
+
+.nav-link {
+    color: blue;
+}
+
+:where(nav a).nav-link {
+    color: green;
+}
+ */
