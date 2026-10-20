@@ -1,0 +1,14 @@
+{
+  "name": "web-engineering-lab",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "serve public",
+    "lint": "eslint .",
+    "format": "prettier --check .",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

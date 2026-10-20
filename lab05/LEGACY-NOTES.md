@@ -27,3 +27,21 @@
 
 **Bonus smell:** `email.indexOf("@") === -1` is an awkward way to ask "is it missing?".
 Modern code writes `!email.includes("@")`, which reads like English.
+## Task 6: First TypeScript errors
+
+1. `src/feedback.ts:2:19 - error TS18047: 'form' is possibly 'null'`
+   `querySelector` returns `Element | null`. If `<form>` were missing, the code
+   would crash in the browser. `strictNullChecks` (part of `strict`) makes me
+   check first. Fix: the `getRequired` helper.
+
+2. `src/utils.ts:2:23 - error TS7006: Parameter 'ms' implicitly has an 'any' type`
+   I never said what kind of value `ms` is. `noImplicitAny` (part of `strict`)
+   forces me to write the type. Fix: `ms: number`.
+
+   ## Task 11: Deliberate type error
+
+I changed `delay(1000)` to `delay("1000")` and ran `npm run build`.
+Error: `TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.`
+`delay` is annotated `ms: number`. Because `noEmitOnError` is true, no JavaScript was
+written, so the broken code could not reach the browser. I changed it back to
+`delay(1000)` and the build succeeded.
