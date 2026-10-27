@@ -1,14 +1,14 @@
-export const page = (title, body, script = &quot;&quot;) =&gt; `&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-&lt;title&gt;${title}&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;${title}&lt;/h1&gt;
+export const page = (title, body, script = "") => `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>${title}</title>
+</head>
+<body>
+<h1>${title}</h1>
 ${body}
 ${script}
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 `;
-export const time = () =&gt; new Date().toLocaleTimeString();
+export const time = () => new Date().toLocaleTimeString();
