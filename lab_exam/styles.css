@@ -1,0 +1,89 @@
+:root {
+  --color-bg: #f5f7fa;
+  --color-surface: #ffffff;
+  --color-primary: #1d4ed8;
+  --color-text: #1f2937;
+  --color-border: #cbd5e1;
+  --color-error: #b91c1c;
+  --color-success: #15803d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Flexbox header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: var(--color-primary);
+  color: #fff;
+}
+header h1 { margin: 0; font-size: 1.5rem; }
+nav { display: flex; gap: 1.25rem; }
+nav a { color: #fff; }
+
+/* Grid: table and form side by side */
+main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+section {
+  background: var(--color-surface);
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+table { width: 100%; border-collapse: collapse; }
+caption { text-align: left; font-weight: bold; padding-bottom: 0.5rem; }
+th, td { padding: 0.6rem; border: 1px solid var(--color-border); text-align: left; }
+th { background: var(--color-primary); color: #fff; }
+
+.field { margin-bottom: 1rem; }
+label { display: block; margin-bottom: 0.25rem; font-weight: bold; }
+input, select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+input:focus, select:focus, button:focus, a:focus {
+  outline: 3px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.error { display: block; color: var(--color-error); font-size: 0.9rem; min-height: 1.1em; }
+
+button {
+  padding: 0.6rem 1.25rem;
+  background: var(--color-primary);
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#message { color: var(--color-success); font-weight: bold; }
+
+footer { text-align: center; padding: 1rem; }
+
+/* Stack in one column below 600px */
+@media (max-width: 600px) {
+  main { grid-template-columns: 1fr; padding: 1rem; }
+  header { padding: 1rem; }
+}

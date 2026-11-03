@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tech Week Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>University Tech Week</h1>
+    <nav aria-label="Main navigation">
+      <a href="#events">Events</a>
+      <a href="#register">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="events" aria-labelledby="events-heading">
+      <h2 id="events-heading">Events</h2>
+      <table>
+        <caption>Tech Week events, schedule, venue and available seats</caption>
+        <thead>
+          <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Day</th>
+            <th scope="col">Venue</th>
+            <th scope="col">Seats</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Web Hackathon</td><td>Monday</td><td>Lab 3</td><td>40</td></tr>
+          <tr><td>UI/UX Workshop</td><td>Tuesday</td><td>Room 214</td><td>25</td></tr>
+          <tr><td>Cyber Security Talk</td><td>Wednesday</td><td>Auditorium</td><td>120</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="register" aria-labelledby="register-heading">
+      <h2 id="register-heading">Register</h2>
+      <form id="reg-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+          <span class="error" id="name-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <span class="error" id="email-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="event">Event</label>
+          <select id="event" name="event">
+            <option value="">-- Choose an event --</option>
+            <option>Web Hackathony</option>
+            <option>UI/UX Workshop</option>
+            <option>Cyber Security Talk</option>
+          </select>
+          <span class="error" id="event-error"></span>
+        </div>
+
+        <button type="submit">Register</button>
+        <p id="message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 University Tech Week</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
